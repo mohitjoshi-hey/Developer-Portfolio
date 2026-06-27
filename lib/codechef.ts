@@ -1,10 +1,11 @@
 export async function getCodeChefData() {
-  const res = await fetch(
-    "http://localhost:3000/api/codechef",
-    {
-      cache: "no-store",
-    }
-  );
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    "http://localhost:3000";
+
+  const res = await fetch(`${baseUrl}/api/codechef`, {
+    cache: "no-store",
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch CodeChef");
