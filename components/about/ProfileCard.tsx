@@ -1,14 +1,22 @@
 "use client";
 
+import Image from "next/image";
+
 export default function ProfileCard() {
   return (
     <div className="rounded-2xl border border-white/10 bg-[#171A21] p-6">
 
       {/* Profile Image */}
-      <div className="mx-auto mb-6 flex h-40 w-40 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-[#111318]">
-        <span className="text-zinc-500">
-          Your Photo
-        </span>
+      <div className="mx-auto mb-6 h-40 w-40 overflow-hidden rounded-2xl border border-white/10 bg-[#111318]">
+
+        <Image
+          src="/images/profile2.jpg"
+          alt="Mohit Joshi"
+          width={160}
+          height={160}
+          className="h-full w-full object-cover"
+        />
+
       </div>
 
       {/* Name */}
@@ -27,10 +35,10 @@ export default function ProfileCard() {
       {/* Status */}
       <div className="mt-6 flex items-center justify-center gap-2">
 
-        <span className="h-2 w-2 animate-pulse rounded-full bg-green-400"></span>
+        <span className="h-2 w-2 animate-pulse rounded-full bg-green-400" />
 
-        <span className="text-green-400">
-          ONLINE
+        <span className="text-green-400 font-medium">
+          Online
         </span>
 
       </div>
@@ -56,7 +64,7 @@ export default function ProfileCard() {
         {/* Progress Bar */}
         <div className="mt-3 h-3 overflow-hidden rounded-full bg-[#111318]">
 
-          <div className="h-full w-[18%] rounded-full bg-violet-500"></div>
+          <div className="h-full w-[18%] rounded-full bg-violet-500" />
 
         </div>
 

@@ -16,9 +16,50 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mohit Joshi | Portfolio",
+  title: "Mohit Joshi | Software Engineer",
+
   description:
-    "Portfolio of Mohit Joshi — Computer Science student, Full Stack Developer, Competitive Programmer and Open Source Contributor.",
+    "Portfolio of Mohit Joshi — Computer Science student at IIIT Una, Full Stack Developer, Competitive Programmer and Open Source Contributor.",
+
+  keywords: [
+    "Mohit Joshi",
+    "Portfolio",
+    "IIIT Una",
+    "Software Engineer",
+    "Full Stack Developer",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Competitive Programming",
+    "Open Source",
+    "Apache",
+    "Go",
+    "Developer",
+  ],
+
+  authors: [{ name: "Mohit Joshi" }],
+  creator: "Mohit Joshi",
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+
+  openGraph: {
+    title: "Mohit Joshi | Software Engineer",
+    description:
+      "Computer Science student at IIIT Una building software, contributing to open source and solving real-world problems.",
+    type: "website",
+    siteName: "Mohit Joshi Portfolio",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Mohit Joshi | Software Engineer",
+    description:
+      "Computer Science student at IIIT Una building software and contributing to open source.",
+  },
 };
 
 export default function RootLayout({
@@ -34,14 +75,12 @@ export default function RootLayout({
     >
       <body className="min-h-screen">
         <ThemeProvider>
-
           {children}
 
           <Toaster
             richColors
             position="top-right"
           />
-
         </ThemeProvider>
       </body>
     </html>
