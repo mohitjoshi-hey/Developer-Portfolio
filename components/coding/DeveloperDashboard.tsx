@@ -4,15 +4,29 @@ import CodeChefCard from "./CodeChefCard";
 
 export default function DeveloperDashboard() {
   return (
-    <div className="grid gap-8">
+    <div className="grid gap-6">
 
-      <GitHubCard />
+      {/* Top Row */}
 
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="grid gap-6 xl:grid-cols-5">
 
-        <LeetCodeCard />
+        {/* GitHub */}
 
-        <CodeChefCard />
+        <div className="xl:col-span-3">
+          <GitHubCard />
+        </div>
+
+        {/* LeetCode */}
+
+        <div>
+          <LeetCodeCard />
+        </div>
+
+        {/* CodeChef */}
+
+        <div>
+          <CodeChefCard />
+        </div>
 
       </div>
 

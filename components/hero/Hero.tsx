@@ -2,23 +2,32 @@
 
 import HeroText from "./HeroText";
 import HeroImage from "./HeroImage";
-import HeroStats from "./HeroStats";
-import HeroButtons from "./HeroButtons";
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="flex min-h-screen items-center pt-24"
+      className="relative overflow-hidden pt-24"
     >
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-16 px-8 py-24 lg:grid-cols-2">
-
+      <div
+        className="
+        relative
+        z-10
+        mx-auto
+        grid
+        min-h-screen
+        max-w-7xl
+        grid-cols-1
+        items-center
+        gap-20
+        px-8
+        lg:grid-cols-2
+        "
+      >
         <HeroText />
 
         <HeroImage />
-        {/* <HeroButtons /> */}
 
-        {/* <HeroStats /> */}
       </div>
     </section>
   );

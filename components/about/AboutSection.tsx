@@ -6,9 +6,9 @@ import MissionCard from "./MissionCard";
 export default function AboutSection() {
   return (
     <section
-      id="about"
-      className="mx-auto max-w-7xl px-8 py-28"
-    >
+  id="about"
+  className="mx-auto max-w-7xl px-8 pt-28 pb-0"
+>
       <div className="mb-12">
 
         <p className="font-mono text-sm uppercase tracking-[0.35em] text-violet-400">

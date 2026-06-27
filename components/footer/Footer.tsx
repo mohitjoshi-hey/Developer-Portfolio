@@ -8,7 +8,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="mt-28 border-t border-white/10">
+    <footer className="mt-8 border-t border-white/10">
 
       <div className="mx-auto flex max-w-7xl flex-col items-center px-8 py-14">
 
@@ -28,7 +28,7 @@ export default function Footer() {
         <div className="mt-8 flex items-center gap-8 text-2xl">
 
           <a
-            href="https://github.com/YOUR_USERNAME"
+            href="https://github.com/mohitjoshi-hey"
             target="_blank"
             rel="noopener noreferrer"
             className="transition duration-300 hover:-translate-y-1 hover:text-violet-400"
@@ -37,7 +37,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://linkedin.com/in/YOUR_USERNAME"
+            href="https://linkedin.com/in/mohit-joshi-a1376b36a"
             target="_blank"
             rel="noopener noreferrer"
             className="transition duration-300 hover:-translate-y-1 hover:text-violet-400"

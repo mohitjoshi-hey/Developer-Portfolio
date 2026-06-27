@@ -1,8 +1,12 @@
+const USERNAME = "joshimohit108";
+
 export async function getLeetCodeData() {
   const res = await fetch(
-    "http://localhost:3000/api/leetcode",
+    `https://alfa-leetcode-api.onrender.com/${USERNAME}/solved`,
     {
-      cache: "no-store",
+      next: {
+        revalidate: 3600,
+      },
     }
   );
 

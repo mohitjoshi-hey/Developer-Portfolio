@@ -25,9 +25,7 @@ export const projects = [
       "DSA",
     ],
 
-    github: "#",
-
-    demo: "#",
+    github: "https://github.com/mohitjoshi-hey/Smart-Calculator-CPP",
   },
 
   {
@@ -56,7 +54,5 @@ export const projects = [
     ],
 
     github: "#",
-
-    demo: "#",
   },
 ];

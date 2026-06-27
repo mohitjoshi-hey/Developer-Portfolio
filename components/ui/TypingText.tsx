@@ -2,41 +2,26 @@
 
 import { useEffect, useState } from "react";
 
-const texts = [
-  "software that solves real problems.",
-  "production-ready web applications.",
-  "backend systems with Go.",
-  "AI-powered solutions.",
-  "projects that make an impact.",
-];
+const text = "software that solves real problems.";
 
 export default function TypingText() {
-  const [textIndex, setTextIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const current = texts[textIndex];
+    let index = 0;
 
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        setDisplayed(current.substring(0, displayed.length + 1));
+    const interval = setInterval(() => {
+      setDisplayed(text.substring(0, index + 1));
 
-        if (displayed === current) {
-          setTimeout(() => setIsDeleting(true), 1800);
-        }
-      } else {
-        setDisplayed(current.substring(0, displayed.length - 1));
+      index++;
 
-        if (displayed === "") {
-          setIsDeleting(false);
-          setTextIndex((prev) => (prev + 1) % texts.length);
-        }
+      if (index === text.length) {
+        clearInterval(interval);
       }
-    }, isDeleting ? 30 : 55);
+    }, 55);
 
-    return () => clearTimeout(timeout);
-  }, [displayed, isDeleting, textIndex]);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>

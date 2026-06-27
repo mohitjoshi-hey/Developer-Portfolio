@@ -6,7 +6,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="mx-auto max-w-5xl px-8 py-24"
+      className="mt-12 mx-auto max-w-5xl px-8 pt-16 pb-8"
     >
       <div className="mb-10">
 

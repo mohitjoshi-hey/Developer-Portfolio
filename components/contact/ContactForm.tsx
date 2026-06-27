@@ -4,9 +4,9 @@ import { toast } from "sonner";
 import { useState } from "react";
 import {
   FaEnvelope,
-  FaGithub,
-  FaLinkedin,
-} from "react-icons/fa";
+  FaPhone,
+  FaLocationDot,
+} from "react-icons/fa6";
 
 export default function ContactForm() {
   const [email, setEmail] = useState("");
@@ -32,13 +32,14 @@ export default function ContactForm() {
 
       const data = await res.json();
 
-      toast.success("Message sent successfully!");
-
       if (data.success) {
+        toast.success("Message sent successfully!");
         setEmail("");
         setMessage("");
+      } else {
+        toast.error("Something went wrong.");
       }
-    } catch (err) {
+    } catch {
       toast.error("Failed to send message.");
     }
 
@@ -46,9 +47,9 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="grid gap-6 lg:grid-cols-[1.8fr_1fr]">
 
-      {/* Form */}
+      {/* Contact Form */}
 
       <form
         onSubmit={handleSubmit}
@@ -76,7 +77,7 @@ export default function ContactForm() {
         />
 
         <textarea
-          rows={4}
+          rows={7}
           placeholder="Write your message..."
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -114,50 +115,71 @@ export default function ContactForm() {
 
       </form>
 
-      {/* Social Row */}
+      {/* Contact Info */}
 
-      <div
-        className="
-        flex
-        flex-wrap
-        items-center
-        justify-center
-        gap-8
-        rounded-2xl
-        border
-        border-white/10
-        bg-[#171A21]
-        p-5
-        "
-      >
+      <div className="rounded-2xl border border-white/10 bg-[#171A21] p-6">
 
-        <a
-          href="mailto:yourmail@gmail.com"
-          className="flex items-center gap-2 text-zinc-400 transition hover:text-violet-400"
-        >
-          <FaEnvelope />
-          Email
-        </a>
+        <h3 className="text-2xl font-bold">
+          Contact Me
+        </h3>
 
-        <a
-          href="https://github.com/YOUR_USERNAME"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-zinc-400 transition hover:text-violet-400"
-        >
-          <FaGithub />
-          GitHub
-        </a>
+        <div className="mt-8 space-y-6">
 
-        <a
-          href="https://linkedin.com/in/YOUR_USERNAME"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-zinc-400 transition hover:text-violet-400"
-        >
-          <FaLinkedin />
-          LinkedIn
-        </a>
+          <div className="flex items-start gap-4">
+
+            <div className="rounded-xl bg-violet-500/10 p-3">
+              <FaEnvelope className="text-violet-400" />
+            </div>
+
+            <div>
+              <p className="text-sm text-zinc-500">
+                Email
+              </p>
+
+              <p className="font-medium">
+                joshionmohit@gmail.com
+              </p>
+            </div>
+
+          </div>
+
+          <div className="flex items-start gap-4">
+
+            <div className="rounded-xl bg-violet-500/10 p-3">
+              <FaPhone className="text-violet-400" />
+            </div>
+
+            <div>
+              <p className="text-sm text-zinc-500">
+                Phone
+              </p>
+
+              <p className="font-medium">
+                +91 86044 72066
+              </p>
+            </div>
+
+          </div>
+
+          <div className="flex items-start gap-4">
+
+            <div className="rounded-xl bg-violet-500/10 p-3">
+              <FaLocationDot className="text-violet-400" />
+            </div>
+
+            <div>
+              <p className="text-sm text-zinc-500">
+                Location
+              </p>
+
+              <p className="font-medium">
+                Uttar Pradesh, India
+              </p>
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 

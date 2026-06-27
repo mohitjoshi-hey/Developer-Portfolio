@@ -1,45 +1,151 @@
 "use client";
 
-import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import ThemeToggle from "./ThemeToggle";
+
+import {
+  FaGithub,
+  FaLinkedin,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 const links = [
-  { name: "#home", href: "#home" },
-  { name: "#projects", href: "#projects" },
-  { name: "#about", href: "#about" },
-  { name: "#contact", href: "#contact" },
+  { name: "Home", href: "#home" },
+  { name: "Projects", href: "#projects" },
+  { name: "Coding", href: "#coding" },
+  { name: "About", href: "#about" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50">
-      <div className="mx-auto mt-5 flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-black/30 px-8 py-4 backdrop-blur-xl">
+    <nav className="fixed inset-x-0 top-0 z-50">
+
+      <div
+        className="
+        mx-auto
+        mt-5
+        flex
+        max-w-7xl
+        items-center
+        justify-between
+        rounded-full
+        border
+        border-white/10
+        bg-black/40
+        px-8
+        py-4
+        backdrop-blur-2xl
+        shadow-lg
+        "
+      >
 
         {/* Logo */}
-        <h1 className="text-2xl font-bold tracking-wider text-purple-400">
+
+        <a
+          href="#home"
+          className="
+          text-2xl
+          font-bold
+          tracking-wider
+          text-violet-400
+          transition
+          hover:text-violet-300
+          "
+        >
           MJ
-        </h1>
+        </a>
 
         {/* Navigation */}
-        <div className="hidden gap-8 md:flex">
+
+        <div className="hidden items-center gap-8 md:flex">
+
           {links.map((link) => (
+
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-zinc-400 transition hover:text-purple-400"
+              className="
+              relative
+              text-sm
+              font-medium
+              text-zinc-400
+              transition
+              hover:text-white
+              after:absolute
+              after:-bottom-1
+              after:left-0
+              after:h-[2px]
+              after:w-0
+              after:bg-violet-400
+              after:transition-all
+              hover:after:w-full
+              "
             >
               {link.name}
             </a>
+
           ))}
+
         </div>
 
-        {/* Social Icons */}
-        <div className="flex items-center gap-5 text-xl text-zinc-400">
-          <FaGithub className="cursor-pointer transition hover:text-white" />
-          <FaLinkedin className="cursor-pointer transition hover:text-blue-400" />
-          <FaXTwitter className="cursor-pointer transition hover:text-white" />
+        {/* Right Side */}
+
+        <div className="flex items-center gap-4">
+
+          <ThemeToggle />
+
+          <a
+            href="https://github.com/mohitjoshi-hey"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+            rounded-full
+            p-2
+            text-zinc-400
+            transition
+            hover:bg-white/10
+            hover:text-white
+            "
+          >
+            <FaGithub size={18} />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/mohit-joshi-a1376b36a"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+            rounded-full
+            p-2
+            text-zinc-400
+            transition
+            hover:bg-blue-500/10
+            hover:text-blue-400
+            "
+          >
+            <FaLinkedin size={18} />
+          </a>
+
+          <a
+            href="https://x.com/MohitJoshi45342"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+            rounded-full
+            p-2
+            text-zinc-400
+            transition
+            hover:bg-white/10
+            hover:text-white
+            "
+          >
+            <FaXTwitter size={18} />
+          </a>
+
         </div>
 
       </div>
+
     </nav>
   );
 }

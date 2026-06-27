@@ -8,7 +8,6 @@ interface ProjectCardProps {
   description: string;
   tech: string[];
   github: string;
-  demo: string;
   terminalTitle: string;
   terminal: string[];
 }
@@ -19,7 +18,6 @@ export default function ProjectCard({
   description,
   tech,
   github,
-  demo,
   terminalTitle,
   terminal,
 }: ProjectCardProps) {
@@ -135,24 +133,6 @@ export default function ProjectCard({
           GitHub
         </a>
 
-        <a
-          href={demo}
-          className="
-          flex
-          items-center
-          gap-2
-          rounded-lg
-          bg-violet-600
-          px-4
-          py-2
-          text-sm
-          transition
-          hover:bg-violet-500
-          "
-        >
-          <FaExternalLinkAlt />
-          Demo
-        </a>
 
       </div>
     </div>

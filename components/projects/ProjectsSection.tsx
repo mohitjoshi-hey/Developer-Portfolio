@@ -7,7 +7,7 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="mx-auto max-w-7xl px-8 py-32"
+      className="mx-auto max-w-7xl px-8 py-24"
     >
       <div className="mb-16">
 
