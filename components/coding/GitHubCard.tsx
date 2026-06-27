@@ -113,7 +113,7 @@ export default async function GitHubCard() {
 
         <div className="space-y-1.5">
 
-          {repos.slice(0, 3).map((repo) => (
+          {repos.slice(0, 3).map((repo: any) => (
 
             <Link
               key={repo.id}
