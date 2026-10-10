@@ -1,33 +1,23 @@
 "use client";
 
 import HeroText from "./HeroText";
-import HeroImage from "./HeroImage";
+import HeroBoySvg from "./HeroBoySvg";
 
 export default function Hero() {
   return (
-    <section
-      id="home"
-      className="relative overflow-hidden pt-24"
-    >
-      <div
-        className="
-        relative
-        z-10
-        mx-auto
-        grid
-        min-h-screen
-        max-w-7xl
-        grid-cols-1
-        items-center
-        gap-20
-        px-8
-        lg:grid-cols-2
-        "
-      >
-        <HeroText />
+    <section id="home" className="w-full bg-white pt-12 pb-20 lg:pt-20 lg:pb-28">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
+          {/* Left Text */}
+          <div className="lg:col-span-7">
+            <HeroText />
+          </div>
 
-        <HeroImage />
-
+          {/* Right Boy Illustration */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+            <HeroBoySvg />
+          </div>
+        </div>
       </div>
     </section>
   );
