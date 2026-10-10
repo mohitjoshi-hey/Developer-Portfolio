@@ -1,151 +1,104 @@
 "use client";
 
-import ThemeToggle from "./ThemeToggle";
+import { useState } from "react";
+import { FaBars, FaXmark, FaDownload } from "react-icons/fa6";
+import ResumeModal from "../hero/ResumeModal";
 
-import {
-  FaGithub,
-  FaLinkedin,
-  FaXTwitter,
-} from "react-icons/fa6";
-
-const links = [
-  { name: "Home", href: "#home" },
-  { name: "Projects", href: "#projects" },
-  { name: "Coding", href: "#coding" },
-  { name: "About", href: "#about" },
-  { name: "Contact", href: "#contact" },
+const navLinks = [
+  { name: "About Me", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Project", href: "#projects" },
+  { name: "Dashboard", href: "#dashboard" },
+  { name: "Contact Me", href: "#contact" },
 ];
 
 export default function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [resumeModalOpen, setResumeModalOpen] = useState(false);
+
   return (
-    <nav className="fixed inset-x-0 top-0 z-50">
+    <>
+      <header className="sticky top-0 z-50 w-full border-b border-zinc-100 bg-white/95 backdrop-blur-md">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-12">
+          {/* Logo matching Figma: Icon + Personal / Mohit */}
+          <a href="#home" className="flex items-center gap-2.5">
+            <div className="flex h-8 w-8 items-center justify-center rounded-sm bg-black text-white font-black text-sm">
+              M
+            </div>
+            <span className="text-xl font-extrabold tracking-tight text-black">
+              Personal
+            </span>
+          </a>
 
-      <div
-        className="
-        mx-auto
-        mt-5
-        flex
-        max-w-7xl
-        items-center
-        justify-between
-        rounded-full
-        border
-        border-white/10
-        bg-black/40
-        px-8
-        py-4
-        backdrop-blur-2xl
-        shadow-lg
-        "
-      >
+          {/* Desktop Navigation Links */}
+          <nav className="hidden items-center gap-8 md:flex">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-sm font-semibold text-black transition-colors hover:text-zinc-600"
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
 
-        {/* Logo */}
-
-        <a
-          href="#home"
-          className="
-          text-2xl
-          font-bold
-          tracking-wider
-          text-violet-400
-          transition
-          hover:text-violet-300
-          "
-        >
-          MJ
-        </a>
-
-        {/* Navigation */}
-
-        <div className="hidden items-center gap-8 md:flex">
-
-          {links.map((link) => (
-
-            <a
-              key={link.name}
-              href={link.href}
-              className="
-              relative
-              text-sm
-              font-medium
-              text-zinc-400
-              transition
-              hover:text-white
-              after:absolute
-              after:-bottom-1
-              after:left-0
-              after:h-[2px]
-              after:w-0
-              after:bg-violet-400
-              after:transition-all
-              hover:after:w-full
-              "
+          {/* Resume Button matching Figma */}
+          <div className="hidden sm:flex items-center">
+            <button
+              onClick={() => setResumeModalOpen(true)}
+              className="flex items-center gap-2 rounded-sm bg-black px-5 py-2.5 text-xs font-bold text-white transition hover:bg-zinc-800"
             >
-              {link.name}
-            </a>
+              <span>Resume</span>
+              <FaDownload size={11} />
+            </button>
+          </div>
 
-          ))}
-
+          {/* Mobile Hamburger Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle Menu"
+            className="flex h-9 w-9 items-center justify-center rounded-sm border border-black bg-white text-black md:hidden"
+          >
+            {mobileMenuOpen ? <FaXmark size={18} /> : <FaBars size={18} />}
+          </button>
         </div>
 
-        {/* Right Side */}
+        {/* Mobile Dropdown */}
+        {mobileMenuOpen && (
+          <div className="border-t border-zinc-200 bg-white px-6 py-6 md:hidden">
+            <div className="flex flex-col space-y-4">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-base font-semibold text-black hover:text-zinc-600"
+                >
+                  {link.name}
+                </a>
+              ))}
+              <div className="pt-2">
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setResumeModalOpen(true);
+                  }}
+                  className="flex w-full items-center justify-center gap-2 rounded-sm bg-black py-3 text-sm font-bold text-white"
+                >
+                  <span>Resume</span>
+                  <FaDownload size={12} />
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+      </header>
 
-        <div className="flex items-center gap-4">
-
-          <ThemeToggle />
-
-          <a
-            href="https://github.com/mohitjoshi-hey"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
-            rounded-full
-            p-2
-            text-zinc-400
-            transition
-            hover:bg-white/10
-            hover:text-white
-            "
-          >
-            <FaGithub size={18} />
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/mohit-joshi-a1376b36a"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
-            rounded-full
-            p-2
-            text-zinc-400
-            transition
-            hover:bg-blue-500/10
-            hover:text-blue-400
-            "
-          >
-            <FaLinkedin size={18} />
-          </a>
-
-          <a
-            href="https://x.com/MohitJoshi45342"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
-            rounded-full
-            p-2
-            text-zinc-400
-            transition
-            hover:bg-white/10
-            hover:text-white
-            "
-          >
-            <FaXTwitter size={18} />
-          </a>
-
-        </div>
-
-      </div>
-
-    </nav>
+      <ResumeModal
+        open={resumeModalOpen}
+        onClose={() => setResumeModalOpen(false)}
+      />
+    </>
   );
 }
