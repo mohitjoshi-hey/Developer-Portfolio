@@ -1,101 +1,46 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/hero/Hero";
-import CodingSection from "@/components/coding/CodingSection";
-import ProjectsSection from "@/components/projects/ProjectsSection";
-import ContactSection from "@/components/contact/ContactSection";
+import SkillsSection from "@/components/skills/SkillsSection";
+import ExperienceSection from "@/components/experience/ExperienceSection";
 import AboutSection from "@/components/about/AboutSection";
+import ProjectsSection from "@/components/projects/ProjectsSection";
+import CodingSection from "@/components/coding/CodingSection";
+import TestimonialSection from "@/components/testimonial/TestimonialSection";
+import ContactSection from "@/components/contact/ContactSection";
 import Footer from "@/components/footer/Footer";
 
 export default function Home() {
   return (
-    <main className="relative overflow-hidden text-white">
-
-            {/* Base Background */}
-      <div className="fixed inset-0 -z-50 bg-[#0B0F19]" />
-
-      {/* Background Grid */}
-      <div
-        className="
-        fixed
-        inset-0
-        -z-40
-        opacity-[0.03]
-        pointer-events-none
-        [background-image:linear-gradient(rgba(255,255,255,.8)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.8)_1px,transparent_1px)]
-        [background-size:60px_60px]
-        "
-      />
-
-      {/* Purple Glow */}
-      <div
-        className="
-        fixed
-        -right-40
-        top-20
-        -z-30
-        h-[700px]
-        w-[700px]
-        rounded-full
-        bg-violet-600/20
-        blur-[170px]
-        "
-      />
-
-      {/* Blue Glow */}
-      <div
-        className="
-        fixed
-        -left-40
-        bottom-0
-        -z-30
-        h-[500px]
-        w-[500px]
-        rounded-full
-        bg-blue-500/15
-        blur-[170px]
-        "
-      />
-
-      {/* MJ Background */}
-      <h1
-        className="
-        fixed
-        left-1/2
-        top-1/2
-        -translate-x-1/2
-        -translate-y-1/2
-        pointer-events-none
-        select-none
-        -z-20
-        text-[20rem]
-        font-black
-        uppercase
-        tracking-tight
-        text-transparent
-        opacity-60
-        [text-stroke:2px_rgba(139,92,246,.15)]
-        [-webkit-text-stroke:2px_rgba(139,92,246,.15)]
-        "
-      >
-        MJ
-      </h1>
-
-      {/* Website */}
-
+    <main className="w-full min-h-screen bg-white text-black antialiased">
+      {/* 1. Header / Navbar */}
       <Navbar />
 
+      {/* 2. Hero Section (White) */}
       <Hero />
 
-      <ProjectsSection />
+      {/* 3. My Skills Section (White) */}
+      <SkillsSection />
 
-      <CodingSection />
+      {/* 4. My Experience Section (Black) */}
+      <ExperienceSection />
 
+      {/* 5. About Me Section (White) */}
       <AboutSection />
 
+      {/* 6. My Projects Section (Black) */}
+      <ProjectsSection />
+
+      {/* 7. Developer Dashboard (White - Formatted natively in the template's 3-card style) */}
+      <CodingSection />
+
+      {/* 8. My Testimonial Section (White) */}
+      <TestimonialSection />
+
+      {/* 9. Contact Me / Let's talk Section (White) */}
       <ContactSection />
 
+      {/* 10. Footer (Black) */}
       <Footer />
-
     </main>
   );
 }

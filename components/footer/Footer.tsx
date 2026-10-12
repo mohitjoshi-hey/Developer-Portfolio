@@ -1,79 +1,24 @@
 "use client";
 
-import {
-  FaGithub,
-  FaLinkedin,
-  FaFileAlt,
-} from "react-icons/fa";
-
 export default function Footer() {
   return (
-    <footer className="mt-8 border-t border-white/10">
-
-      <div className="mx-auto flex max-w-7xl flex-col items-center px-8 py-14">
-
-        {/* Quote */}
-
-        <p className="max-w-2xl text-center text-lg leading-8 text-zinc-400">
-          Thanks for visiting my portfolio.
-          <br />
-          I'm always learning, building and exploring new ideas.
-          <span className="text-violet-400">
-            {" "}Let's create something meaningful together.
+    <footer className="w-full bg-black py-8 text-white border-t border-zinc-900">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 sm:flex-row lg:px-12 text-xs">
+        {/* Logo matching Figma */}
+        <div className="flex items-center gap-2.5">
+          <div className="flex h-7 w-7 items-center justify-center rounded-sm bg-white text-black font-black text-xs">
+            M
+          </div>
+          <span className="text-base font-extrabold tracking-tight text-white">
+            Personal
           </span>
+        </div>
+
+        {/* Copyright notice matching Figma template */}
+        <p className="text-zinc-400 font-medium text-center sm:text-right">
+          © {new Date().getFullYear()} Mohit Joshi. All Rights Reserved.
         </p>
-
-        {/* Social Links */}
-
-        <div className="mt-8 flex items-center gap-8 text-2xl">
-
-          <a
-            href="https://github.com/mohitjoshi-hey"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition duration-300 hover:-translate-y-1 hover:text-violet-400"
-          >
-            <FaGithub />
-          </a>
-
-          <a
-            href="https://linkedin.com/in/mohit-joshi-a1376b36a"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition duration-300 hover:-translate-y-1 hover:text-violet-400"
-          >
-            <FaLinkedin />
-          </a>
-
-          <a
-            href="/resume.pdf"
-            className="transition duration-300 hover:-translate-y-1 hover:text-violet-400"
-          >
-            <FaFileAlt />
-          </a>
-
-        </div>
-
-        {/* Divider */}
-
-        <div className="my-10 h-px w-full max-w-xl bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-
-        {/* Bottom */}
-
-        <div className="text-center">
-
-          <p className="text-sm text-zinc-500">
-            © {new Date().getFullYear()} Mohit Joshi
-          </p>
-
-          <p className="mt-2 text-sm text-zinc-600">
-            Built with Next.js · TypeScript · Tailwind CSS
-          </p>
-
-        </div>
-
       </div>
-
     </footer>
   );
 }
