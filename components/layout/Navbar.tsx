@@ -20,23 +20,31 @@ export default function Navbar() {
     <>
       <header className="sticky top-0 z-50 w-full border-b border-zinc-100 bg-white/95 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-12">
-          {/* Logo matching Figma: Icon + Personal / Mohit */}
-          <a href="#home" className="flex items-center gap-2.5">
-            <div className="flex h-8 w-8 items-center justify-center rounded-sm bg-black text-white font-black text-sm">
-              M
+          {/* Modern Engineering Monogram: <MJ /> */}
+          <a
+            href="#home"
+            className="group flex items-center gap-2.5 transition-transform duration-200 hover:scale-[1.02]"
+          >
+            <div className="flex h-9 w-9 items-center justify-center rounded-sm bg-black font-mono text-xs font-black text-white transition-colors duration-200 group-hover:bg-zinc-800">
+              &lt;MJ/&gt;
             </div>
-            <span className="text-xl font-extrabold tracking-tight text-black">
-              Personal
-            </span>
+            <div className="flex flex-col">
+              <span className="text-base font-extrabold tracking-tight text-black leading-none">
+                Mohit Joshi
+              </span>
+              <span className="text-[10px] font-mono font-semibold text-zinc-500 leading-tight">
+                portfolio.dev
+              </span>
+            </div>
           </a>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden items-center gap-8 md:flex">
+          {/* Desktop Navigation Links with enhanced, high-contrast hover feedback */}
+          <nav className="hidden items-center gap-2 md:flex">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-semibold text-black transition-colors hover:text-zinc-600"
+                className="relative rounded-sm px-3.5 py-1.5 text-sm font-semibold text-zinc-700 transition-all duration-200 hover:bg-black hover:text-white"
               >
                 {link.name}
               </a>
@@ -47,7 +55,7 @@ export default function Navbar() {
           <div className="hidden sm:flex items-center">
             <button
               onClick={() => setResumeModalOpen(true)}
-              className="flex items-center gap-2 rounded-sm bg-black px-5 py-2.5 text-xs font-bold text-white transition hover:bg-zinc-800"
+              className="flex items-center gap-2 rounded-sm bg-black px-5 py-2.5 text-xs font-bold text-white transition-all duration-200 hover:bg-zinc-800 hover:shadow-md active:scale-95"
             >
               <span>Resume</span>
               <FaDownload size={11} />

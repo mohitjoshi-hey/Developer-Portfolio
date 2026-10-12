@@ -64,10 +64,10 @@ export default function ContactSection() {
 
             <div className="mt-10 space-y-3 font-extrabold text-lg sm:text-2xl text-black">
               <a
-                href="mailto:joshimohit1981@gmail.com"
+                href="mailto:joshionmohit@gmail.com"
                 className="block hover:underline"
               >
-                joshimohit1981@gmail.com
+                joshionmohit@gmail.com
               </a>
               <a href="tel:+918604472066" className="block hover:underline">
                 +91 86044 72066
@@ -162,7 +162,7 @@ export default function ContactSection() {
                     <FaXTwitter size={15} />
                   </a>
                   <a
-                    href="mailto:joshimohit1981@gmail.com"
+                    href="mailto:joshionmohit@gmail.com"
                     aria-label="Email"
                     className="flex h-10 w-10 items-center justify-center rounded-sm border-2 border-black bg-black text-white hover:bg-white hover:text-black transition"
                   >
