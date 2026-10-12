@@ -40,7 +40,7 @@ export default function HeroText() {
           label="Twitter"
         />
         <SocialIcon
-          href="mailto:joshimohit1981@gmail.com"
+          href="mailto:joshionmohit@gmail.com"
           icon={<FaEnvelope size={17} />}
           label="Email"
         />
