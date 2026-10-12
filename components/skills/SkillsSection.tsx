@@ -5,14 +5,11 @@ import {
   SiJavascript,
   SiCplusplus,
   SiGo,
-  SiTypescript,
-  SiReact,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiNodedotjs,
-  SiArduino,
+  SiPostgresql,
+  SiHtml5,
+  SiVercel,
 } from "react-icons/si";
-import { FaCode } from "react-icons/fa6";
+import { FaCode, FaJava, FaDatabase } from "react-icons/fa6";
 
 interface Skill {
   name: string;
@@ -26,41 +23,41 @@ const skills: Skill[] = [
     icon: (inv) => <SiGit size={36} className={inv ? "text-white" : "text-black"} />,
   },
   {
-    name: "Javascript",
-    isInvertedInitially: true, // Matches the exact inverted card in the Figma template!
-    icon: (inv) => <SiJavascript size={36} className={inv ? "text-white" : "text-black"} />,
+    name: "Go (Golang)",
+    isInvertedInitially: true, // Matches the inverted card from Figma template
+    icon: (inv) => <SiGo size={36} className={inv ? "text-white" : "text-black"} />,
   },
   {
     name: "C++",
     icon: (inv) => <SiCplusplus size={36} className={inv ? "text-white" : "text-black"} />,
   },
   {
-    name: "Go (Golang)",
-    icon: (inv) => <SiGo size={36} className={inv ? "text-white" : "text-black"} />,
-  },
-  {
-    name: "TypeScript",
-    icon: (inv) => <SiTypescript size={36} className={inv ? "text-white" : "text-black"} />,
-  },
-  {
-    name: "React",
-    icon: (inv) => <SiReact size={36} className={inv ? "text-white" : "text-black"} />,
-  },
-  {
-    name: "Next.js",
-    icon: (inv) => <SiNextdotjs size={36} className={inv ? "text-white" : "text-black"} />,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: (inv) => <SiTailwindcss size={36} className={inv ? "text-white" : "text-black"} />,
-  },
-  {
-    name: "DSA",
+    name: "C",
     icon: (inv) => <FaCode size={36} className={inv ? "text-white" : "text-black"} />,
   },
   {
-    name: "Arduino / IoT",
-    icon: (inv) => <SiArduino size={36} className={inv ? "text-white" : "text-black"} />,
+    name: "PostgreSQL",
+    icon: (inv) => <SiPostgresql size={36} className={inv ? "text-white" : "text-black"} />,
+  },
+  {
+    name: "SQL",
+    icon: (inv) => <FaDatabase size={36} className={inv ? "text-white" : "text-black"} />,
+  },
+  {
+    name: "JavaScript",
+    icon: (inv) => <SiJavascript size={36} className={inv ? "text-white" : "text-black"} />,
+  },
+  {
+    name: "Java",
+    icon: (inv) => <FaJava size={36} className={inv ? "text-white" : "text-black"} />,
+  },
+  {
+    name: "HTML / CSS",
+    icon: (inv) => <SiHtml5 size={36} className={inv ? "text-white" : "text-black"} />,
+  },
+  {
+    name: "Vercel / Cloud",
+    icon: (inv) => <SiVercel size={36} className={inv ? "text-white" : "text-black"} />,
   },
 ];
 

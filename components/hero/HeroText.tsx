@@ -19,7 +19,7 @@ export default function HeroText() {
 
       {/* Description paragraph */}
       <p className="mt-7 max-w-xl text-sm sm:text-base leading-relaxed text-zinc-600">
-        I am a second-year Computer Science Engineering student at Indian Institute of Information Technology Una. Passionate about competitive programming, building robust backend architectures in Go and C++, and contributing to open-source software.
+        I am a Computer Science and Engineering student at Indian Institute of Information Technology Una. Passionate about systems engineering, building high-performance generic algorithms in Go and C++, and contributing to the Apache Software Foundation.
       </p>
 
       {/* Social Icons row with connecting horizontal line matching Figma */}
