@@ -292,14 +292,14 @@ export default function CodingSection() {
                 </div>
               </div>
               <p className="mt-4 text-sm leading-relaxed text-zinc-600">
-                Actively contributing to production-grade repositories and community issues under the Apache Software Foundation. Submitting pull requests reviewed, refined, and merged by project maintainers according to industry standards.
+                Actively contributing to production-grade repositories under the Apache Software Foundation. Merged 5 pull requests (#274, #286, #288, #289, #294) resolving frontend navigation, HTML consistency, and technical documentation across Apache infrastructure.
               </p>
               <div className="mt-5 flex flex-wrap items-center gap-3">
                 <span className="rounded-sm border border-black bg-black px-3 py-1 text-xs font-bold text-white">
-                  5+ Merged PRs
+                  5 Merged PRs (#274, #286, #288, #289, #294)
                 </span>
                 <span className="rounded-sm border border-zinc-300 bg-white px-3 py-1 text-xs font-bold text-black">
-                  Apache Infra
+                  Apache Infrastructure
                 </span>
                 <span className="rounded-sm border border-emerald-600 bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">
                   Status: Active

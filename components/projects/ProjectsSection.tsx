@@ -14,10 +14,41 @@ interface ProjectItem {
 const projectsList: ProjectItem[] = [
   {
     number: "01",
-    title: "CalcForge — Smart C++ Expression Evaluator",
+    title: "stlgo — High-Performance Generic Data Structures & Algorithms",
     description:
-      "A high-performance mathematical parser and calculator engine engineered in C++ using STL and Stack data structures. Seamlessly validates complex parenthesized arithmetic expressions, converts infix to postfix notation, and computes results with sub-millisecond precision.",
-    tech: ["C++", "STL", "Stack", "DSA", "Algorithms"],
+      "A high-performance generic algorithms and containers library for Go (Golang). Implements slice-backed Stack, Queue, and Deque containers alongside binary search, sorting, numeric, and permutation algorithms designed around CPU cache locality and zero interface boxing.",
+    tech: ["Go (Golang)", "Generics", "Data Structures", "Algorithms", "Benchmarking"],
+    github: "https://github.com/mohitjoshi-hey",
+    mockup: (
+      <div className="w-full h-full min-h-[260px] rounded-2xl border border-zinc-800 bg-[#0d0f17] p-5 font-mono text-xs text-zinc-300 flex flex-col justify-between">
+        <div>
+          <div className="flex items-center justify-between border-b border-zinc-800 pb-3 mb-3">
+            <div className="flex gap-1.5">
+              <span className="h-2.5 w-2.5 rounded-full bg-red-500" />
+              <span className="h-2.5 w-2.5 rounded-full bg-yellow-500" />
+              <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
+            </div>
+            <span className="text-[11px] text-zinc-500">container_test.go • Go 1.22+</span>
+          </div>
+          <p className="text-zinc-500">// Cache-friendly generic algorithms</p>
+          <p className="mt-1 text-zinc-400">$ go test -bench=. -benchmem ./...</p>
+          <p className="text-cyan-400">&gt; BenchmarkDeque_PushBack-8: 42.1 ns/op (0 B/op, 0 allocs/op)</p>
+          <p className="text-cyan-400">&gt; BenchmarkBinarySearch-8: 14.8 ns/op</p>
+          <p className="text-emerald-400 font-bold">✓ PASS: All unit tests and race detectors passed</p>
+        </div>
+        <div className="mt-4 pt-3 border-t border-zinc-800 flex justify-between text-[11px] text-zinc-500">
+          <span>Go Generics</span>
+          <span className="text-emerald-400">Zero-Boxing Allocations</span>
+        </div>
+      </div>
+    ),
+  },
+  {
+    number: "02",
+    title: "Smart Calculator System — Context-Aware Expression Engine",
+    description:
+      "A stack-based C++ expression evaluation engine supporting operator precedence, nested parentheses, floating-point arithmetic, exponentiation, and chained unary operators. Features shunting-yard parsing and robust handling for divide-by-zero.",
+    tech: ["C++", "Shunting-Yard", "STL", "DSA", "Algorithms"],
     github: "https://github.com/mohitjoshi-hey/Smart-Calculator-CPP",
     mockup: (
       <div className="w-full h-full min-h-[260px] rounded-2xl border border-zinc-800 bg-[#0d0f17] p-5 font-mono text-xs text-zinc-300 flex flex-col justify-between">
@@ -44,42 +75,11 @@ const projectsList: ProjectItem[] = [
     ),
   },
   {
-    number: "02",
-    title: "GoServe — Concurrency-Powered Go REST API",
-    description:
-      "A lightweight, scalable backend REST API service crafted in Go (Golang). Employs Goroutines and channels to handle concurrent HTTP requests, JSON serialization, health checks, and low-latency microservice communication with zero external overhead.",
-    tech: ["Go (Golang)", "REST API", "Goroutines", "HTTP", "JSON"],
-    github: "https://github.com/mohitjoshi-hey/go-game-score",
-    mockup: (
-      <div className="w-full h-full min-h-[260px] rounded-2xl border border-zinc-800 bg-[#0d0f17] p-5 font-mono text-xs text-zinc-300 flex flex-col justify-between">
-        <div>
-          <div className="flex items-center justify-between border-b border-zinc-800 pb-3 mb-3">
-            <div className="flex gap-1.5">
-              <span className="h-2.5 w-2.5 rounded-full bg-red-500" />
-              <span className="h-2.5 w-2.5 rounded-full bg-yellow-500" />
-              <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
-            </div>
-            <span className="text-[11px] text-zinc-500">server.go • Go 1.22</span>
-          </div>
-          <p className="text-zinc-500">// High-concurrency REST server</p>
-          <p className="mt-1 text-zinc-400">$ go run cmd/server/main.go</p>
-          <p className="text-cyan-400">&gt; Initializing GoServe REST engine...</p>
-          <p className="text-zinc-400">&gt; Listening on :8080 (Goroutines: 16)</p>
-          <p className="text-emerald-400 font-bold">✓ Status 200 OK — Ready for requests</p>
-        </div>
-        <div className="mt-4 pt-3 border-t border-zinc-800 flex justify-between text-[11px] text-zinc-500">
-          <span>HTTP Engine</span>
-          <span className="text-cyan-400">Response: 0.8ms</span>
-        </div>
-      </div>
-    ),
-  },
-  {
     number: "03",
-    title: "Robo-Soccer Bot — TechTatva 2k24 Champion",
+    title: "Leads Tracker — Persistent Chrome Productivity Extension",
     description:
-      "A competition-winning remote-controlled robotic soccer vehicle built for the TechTatva 2k24 robotics tournament. Features Arduino microcontroller architecture, dual H-Bridge motor drivers, high-RPM DC drivetrains, and responsive 2.4GHz RF communication.",
-    tech: ["Arduino", "Embedded C++", "H-Bridge Drivers", "Robotics", "RF Link"],
+      "A lightweight Chrome browser extension for capturing, organizing, and persisting web links and leads. Implements active-tab URL capture via Chrome Tabs API and client-side localStorage synchronization with individual and batch deletions.",
+    tech: ["JavaScript", "Chrome Extensions API", "HTML5", "CSS3", "localStorage"],
     github: "https://github.com/mohitjoshi-hey",
     mockup: (
       <div className="w-full h-full min-h-[260px] rounded-2xl border border-zinc-800 bg-[#0d0f17] p-5 font-mono text-xs text-zinc-300 flex flex-col justify-between">
@@ -90,17 +90,17 @@ const projectsList: ProjectItem[] = [
               <span className="h-2.5 w-2.5 rounded-full bg-yellow-500" />
               <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
             </div>
-            <span className="text-[11px] text-zinc-500">robot_control.ino • Arduino UNO</span>
+            <span className="text-[11px] text-zinc-500">manifest.json • Chrome MV3</span>
           </div>
-          <p className="text-zinc-500">// Robotics controller firmware</p>
-          <p className="mt-1 text-zinc-400">$ arduino-cli compile &amp;&amp; upload</p>
-          <p className="text-amber-400">&gt; Radio Link: 2.4GHz RF Initialized</p>
-          <p className="text-amber-400">&gt; PWM Motor Calibration: 100% Duty</p>
-          <p className="text-emerald-400 font-bold">🏆 1st Prize Awarded — TechTatva 2k24</p>
+          <p className="text-zinc-500">// Chrome Tabs API Lead Storage</p>
+          <p className="mt-1 text-zinc-400">&gt; chrome.tabs.query(&#123; active: true &#125;)</p>
+          <p className="text-amber-400">&gt; URL captured: https://github.com/apache/infrastructure</p>
+          <p className="text-zinc-400">&gt; Synchronizing with localStorage...</p>
+          <p className="text-emerald-400 font-bold">✓ Saved 1 lead • Active session restored</p>
         </div>
         <div className="mt-4 pt-3 border-t border-zinc-800 flex justify-between text-[11px] text-zinc-500">
-          <span>Arduino Uno</span>
-          <span className="text-amber-400">1st Prize Winner</span>
+          <span>Chrome API</span>
+          <span className="text-amber-400">Persistent Storage</span>
         </div>
       </div>
     ),

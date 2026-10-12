@@ -13,29 +13,37 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    id: "iiit-una",
-    role: "Computer Science Engineering Student",
-    company: "Indian Institute of Information Technology Una",
-    period: "Aug 2024 - Present",
-    description:
-      "Pursuing Bachelor of Technology in Computer Science & Engineering. Mastering Data Structures & Algorithms, Operating Systems, Database Management, and building concurrent backend applications in Go and C++.",
-  },
-  {
-    id: "techtatva",
-    role: "1st Prize Winner — Robo-Soccer Champion",
-    company: "TechTatva 2k24 National Robotics Event",
-    period: "Nov 2024",
-    isHighlighted: true, // Matches highlighted middle card in Figma
-    description:
-      "Engineered an agile, high-torque remote-controlled soccer vehicle using Arduino, dual H-Bridge motor drivers, and 2.4GHz RF communication. Won 1st Prize competing against collegiate engineering teams.",
-  },
-  {
     id: "apache",
-    role: "Open Source Contributor",
-    company: "Apache Software Foundation",
-    period: "2024 - Present",
+    role: "Open Source Contributor (Remote)",
+    company: "Apache Software Foundation (Infrastructure)",
+    period: "Oct 2025 - Present",
+    isHighlighted: true, // Matches highlighted card in Figma
     description:
-      "Actively contributing bug fixes, performance improvements, and documentation pull requests to real-world repositories within the Apache ecosystem, following strict open-source review pipelines.",
+      "Merged 5 pull requests (#274, #286, #288, #289, #294) addressing frontend consistency, sticky navigation bar implementation with Bootstrap, and technical documentation refinements across services pages.",
+  },
+  {
+    id: "iiit-una",
+    role: "B.Tech in Computer Science and Engineering",
+    company: "Indian Institute of Information Technology Una",
+    period: "2025 - 2029",
+    description:
+      "Undergraduate student in Computer Science & Engineering. Specializing in Systems Programming, Generic Data Structures in Go, and Core Algorithm Design.",
+  },
+  {
+    id: "nirmala",
+    role: "Senior Secondary (Class XII) — 92.5%",
+    company: "Nirmala Convent Inter College, Lucknow",
+    period: "2024",
+    description:
+      "Graduated with 92.5% distinction in Science & Mathematics, establishing a robust foundation in algorithmic thinking and mathematical problem solving.",
+  },
+  {
+    id: "achievements",
+    role: "Hackathon Competitor & Award Winner",
+    company: "Inter-IIIT Udbhav 2025 & PixelForge",
+    period: "2025",
+    description:
+      "Awarded 4th Runner-Up at Inter-IIIT Hackathon Udbhav 2025, and clinched 3rd Position at PixelForge, IIIT Una.",
   },
 ];
 

@@ -46,22 +46,23 @@ export default function AboutSection() {
 
             <div className="mt-8 space-y-6 text-sm sm:text-base leading-relaxed text-zinc-600">
               <p>
-                I am a second-year Computer Science and Engineering student at the{" "}
+                I am an undergraduate Computer Science and Engineering student at the{" "}
                 <strong className="text-black font-bold">
                   Indian Institute of Information Technology Una (IIIT Una)
                 </strong>
-                , Himachal Pradesh. Driven by a deep curiosity for how complex computer systems work under the hood, I focus on building efficient, high-performance software.
+                , Himachal Pradesh (Batch 2025–2029). Driven by how memory, compilers, and distributed architectures work under the hood, I focus on building efficient, high-performance software.
               </p>
 
               <p>
-                My core technical passions lie in competitive programming, algorithmic problem-solving in{" "}
-                <strong className="text-black font-bold">C++</strong>, and scalable backend engineering using{" "}
-                <strong className="text-black font-bold">Go (Golang)</strong>. Whether implementing custom data structures like stacks and trees or designing concurrent microservice architectures, I take pride in writing clean, well-tested, and maintainable code.
+                My core technical expertise centers on systems programming in{" "}
+                <strong className="text-black font-bold">Go (Golang)</strong> and{" "}
+                <strong className="text-black font-bold">C++</strong>. I have authored{" "}
+                <strong className="text-black font-bold">stlgo</strong>, a high-performance generic container and algorithms library for Go engineered for CPU cache locality and minimal memory allocations, alongside context-aware mathematical parsers in C++.
               </p>
 
               <p>
-                Beyond academics, I actively contribute to the open-source community through the{" "}
-                <strong className="text-black font-bold">Apache Software Foundation</strong>, compete in university robotics tournaments (clinching 1st Prize in Robo-Soccer at TechTatva 2k24 with an autonomous Arduino car), and collaborate with engineers worldwide.
+                Beyond individual engineering, I am an active open-source contributor to the{" "}
+                <strong className="text-black font-bold">Apache Software Foundation</strong> with 5 merged pull requests across frontend and infrastructure systems, and a competitive hackathon builder (4th Runner-Up at Inter-IIIT Hackathon Udbhav 2025).
               </p>
             </div>
           </div>
