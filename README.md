@@ -2,7 +2,7 @@
 
 A modern and responsive developer portfolio built with **Next.js 16**, **React**, **TypeScript**, and **Tailwind CSS**. This portfolio showcases my projects, coding profiles, open-source contributions, technical skills, and provides an easy way for recruiters and developers to connect with me.
 
-🌐 **Live Demo:** https://developer-portfolio-jmsi4eee9-mohit-joshis-projects-b6cd9ed2.vercel.app/
+🌐 **Live Demo:** https://mjoshi-dev.vercel.app/
 
 ---
 
